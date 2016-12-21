@@ -14,6 +14,7 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var nonButton: UIButton!
     @IBOutlet weak var ouiButton: UIButton!
     @IBOutlet weak var dialogue: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let resuseIdentifier = "ItemsCollectionViewCell"
     @IBOutlet weak var ItemsCollectionView: UICollectionView!
@@ -70,6 +71,7 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print ("Folder \(indexPath.item + 1) was selected")
       //  let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
+        collectionView.userInteractionEnabled = false
         dialogue.alpha = 1
         nonButton.alpha = 1
         ouiButton.alpha = 1
@@ -79,6 +81,7 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     @IBAction func nonAction(sender: AnyObject) {
+     collectionView.userInteractionEnabled = true
         dialogue.alpha = 0
         nonButton.alpha = 0
         ouiButton.alpha = 0

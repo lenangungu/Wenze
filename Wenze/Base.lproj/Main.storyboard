@@ -80,6 +80,7 @@
                                     <constraint firstAttribute="width" constant="111" id="8Xo-T0-Qoo"/>
                                     <constraint firstAttribute="height" constant="36" id="AhC-OP-xiQ"/>
                                 </constraints>
+                                <state key="normal" title="biiiiiiss"/>
                                 <connections>
                                     <action selector="nonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4e-aL-HUg"/>
                                 </connections>
@@ -90,7 +91,6 @@
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="47a-OS-ILP"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="8G0-20-mHI"/>
                             <constraint firstItem="JSb-8E-jsj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="96I-f1-crA"/>
-                            <constraint firstItem="uvi-MZ-2Y9" firstAttribute="top" secondItem="JSb-8E-jsj" secondAttribute="bottom" constant="-82" id="Gkp-NT-hAv"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KTk-UQ-t2I"/>
                             <constraint firstItem="JSb-8E-jsj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="126" id="NaK-fk-b0t"/>
                             <constraint firstItem="JSb-8E-jsj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Wuf-SB-2Ct"/>
@@ -99,10 +99,12 @@
                             <constraint firstItem="uvi-MZ-2Y9" firstAttribute="leading" secondItem="SIj-fs-FpP" secondAttribute="trailing" constant="38" id="cR8-ZW-Qsv"/>
                             <constraint firstItem="JSb-8E-jsj" firstAttribute="leading" secondItem="SIj-fs-FpP" secondAttribute="trailing" constant="-161" id="cqe-aW-lJo"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hH6-uK-XL1"/>
+                            <constraint firstItem="uvi-MZ-2Y9" firstAttribute="top" secondItem="JSb-8E-jsj" secondAttribute="bottom" constant="-82" id="i1D-zG-ExC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ItemsCollectionView" destination="BIQ-RI-Wnk" id="iFY-6M-dQP"/>
+                        <outlet property="collectionView" destination="BIQ-RI-Wnk" id="FjH-Cz-Sjg"/>
                         <outlet property="dialogue" destination="JSb-8E-jsj" id="9Qm-bZ-sRm"/>
                         <outlet property="nonButton" destination="uvi-MZ-2Y9" id="gsz-E1-z3c"/>
                         <outlet property="ouiButton" destination="SIj-fs-FpP" id="Kia-fQ-EsJ"/>
