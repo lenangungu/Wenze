@@ -10,6 +10,10 @@ import UIKit
 
 class ItemsViewController: UIViewController {
 
+
+    @IBOutlet weak var nonButton: UIButton!
+    @IBOutlet weak var ouiButton: UIButton!
+    @IBOutlet weak var dialogue: UIImageView!
     
     let resuseIdentifier = "ItemsCollectionViewCell"
     @IBOutlet weak var ItemsCollectionView: UICollectionView!
@@ -18,7 +22,10 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dialogue.alpha = 0
+        nonButton.alpha = 0
+        ouiButton.alpha = 0
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,8 +69,19 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print ("Folder \(indexPath.item + 1) was selected")
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
-        cell.backgroundColor = UIColor.blueColor()
+      //  let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
+        dialogue.alpha = 1
+        nonButton.alpha = 1
+        ouiButton.alpha = 1
+    }
+    
+    @IBAction func ouiAction(sender: AnyObject) {
+    }
+    
+    @IBAction func nonAction(sender: AnyObject) {
+        dialogue.alpha = 0
+        nonButton.alpha = 0
+        ouiButton.alpha = 0
     }
     
 }

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Items View Controller-->
@@ -60,17 +61,51 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="DVf-rF-6y7"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 7" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-8E-jsj">
+                                <rect key="frame" x="120" y="146" width="360" height="180"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-fs-FpP">
+                                <rect key="frame" x="170" y="244" width="111" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Nrm-kr-HcM"/>
+                                    <constraint firstAttribute="height" constant="36" id="VPw-Dh-fZB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ouiAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ba8-Ec-S47"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-MZ-2Y9">
+                                <rect key="frame" x="319" y="244" width="111" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="8Xo-T0-Qoo"/>
+                                    <constraint firstAttribute="height" constant="36" id="AhC-OP-xiQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="nonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4e-aL-HUg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="47a-OS-ILP"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="8G0-20-mHI"/>
+                            <constraint firstItem="JSb-8E-jsj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="96I-f1-crA"/>
+                            <constraint firstItem="uvi-MZ-2Y9" firstAttribute="top" secondItem="JSb-8E-jsj" secondAttribute="bottom" constant="-82" id="Gkp-NT-hAv"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KTk-UQ-t2I"/>
+                            <constraint firstItem="JSb-8E-jsj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="126" id="NaK-fk-b0t"/>
+                            <constraint firstItem="JSb-8E-jsj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Wuf-SB-2Ct"/>
+                            <constraint firstItem="SIj-fs-FpP" firstAttribute="top" secondItem="JSb-8E-jsj" secondAttribute="bottom" constant="-82" id="Z48-eM-cpA"/>
+                            <constraint firstItem="JSb-8E-jsj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aqv-Cw-7jm"/>
+                            <constraint firstItem="uvi-MZ-2Y9" firstAttribute="leading" secondItem="SIj-fs-FpP" secondAttribute="trailing" constant="38" id="cR8-ZW-Qsv"/>
+                            <constraint firstItem="JSb-8E-jsj" firstAttribute="leading" secondItem="SIj-fs-FpP" secondAttribute="trailing" constant="-161" id="cqe-aW-lJo"/>
                             <constraint firstItem="BIQ-RI-Wnk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hH6-uK-XL1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ItemsCollectionView" destination="BIQ-RI-Wnk" id="iFY-6M-dQP"/>
+                        <outlet property="dialogue" destination="JSb-8E-jsj" id="9Qm-bZ-sRm"/>
+                        <outlet property="nonButton" destination="uvi-MZ-2Y9" id="gsz-E1-z3c"/>
+                        <outlet property="ouiButton" destination="SIj-fs-FpP" id="Kia-fQ-EsJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,5 +115,6 @@
     </scenes>
     <resources>
         <image name="Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x" width="800" height="600"/>
+        <image name="Group 7" width="890" height="608"/>
     </resources>
 </document>
