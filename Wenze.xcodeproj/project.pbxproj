@@ -14,6 +14,7 @@
 		8ACC02891E08F1E300E1E030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC02871E08F1E300E1E030 /* LaunchScreen.storyboard */; };
 		8ACC02911E08F57400E1E030 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC02901E08F57400E1E030 /* ItemsViewController.swift */; };
 		8ACC02931E08F8E500E1E030 /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC02921E08F8E500E1E030 /* ItemsCollectionViewCell.swift */; };
+		8ACC02951E0C999800E1E030 /* AchatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC02941E0C999800E1E030 /* AchatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8ACC028A1E08F1E300E1E030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACC02901E08F57400E1E030 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		8ACC02921E08F8E500E1E030 /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8ACC02941E0C999800E1E030 /* AchatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				8ACC027E1E08F1E300E1E030 /* AppDelegate.swift */,
 				8ACC02801E08F1E300E1E030 /* ViewController.swift */,
 				8ACC02821E08F1E300E1E030 /* Main.storyboard */,
+				8ACC02941E0C999800E1E030 /* AchatViewController.swift */,
 				8ACC02901E08F57400E1E030 /* ItemsViewController.swift */,
 				8ACC02921E08F8E500E1E030 /* ItemsCollectionViewCell.swift */,
 				8ACC02851E08F1E300E1E030 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACC02951E0C999800E1E030 /* AchatViewController.swift in Sources */,
 				8ACC02811E08F1E300E1E030 /* ViewController.swift in Sources */,
 				8ACC02931E08F8E500E1E030 /* ItemsCollectionViewCell.swift in Sources */,
 				8ACC02911E08F57400E1E030 /* ItemsViewController.swift in Sources */,

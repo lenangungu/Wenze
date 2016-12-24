@@ -11,21 +11,16 @@ import UIKit
 class ItemsViewController: UIViewController {
 
 
-    @IBOutlet weak var nonButton: UIButton!
-    @IBOutlet weak var ouiButton: UIButton!
-    @IBOutlet weak var dialogue: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    var index: Int?
     
     let resuseIdentifier = "ItemsCollectionViewCell"
     @IBOutlet weak var ItemsCollectionView: UICollectionView!
-    var items: [UIImage] = [ UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!, UIImage(named: "image6")!, UIImage(named: "image7")!, UIImage(named: "image8")!]
+    var items: [UIImage] = [ UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!, UIImage(named: "image6")!, UIImage(named: "image7")!, UIImage(named: "image8")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dialogue.alpha = 0
-        nonButton.alpha = 0
-        ouiButton.alpha = 0
       
     }
 
@@ -34,7 +29,21 @@ class ItemsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToAchatViewController(segue: UIStoryboardSegue)
+    {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "achat")
+        {
+            let origin = sender as! ItemsCollectionViewCell
+            let nextVC = segue.destinationViewController as! AchatViewController
+            nextVC.arNum = origin.cellIndex! + 1 
 
+        }
+    }
+    
 
 }
 extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSource
@@ -50,15 +59,8 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
         
         cell.cellIndex = indexPath.row
-       // cell.image = items[indexPath.row]
+        index = indexPath.row
         cell.image.image = items[indexPath.row]
-/*
-        let gestureRecognizer = UILongPressGestureRecognizer()
-        
-        gestureRecognizer.addTarget(self , action: #selector(FoldersViewController.deleteLongPressAction(_:)))
-        // Adding recognizer to cell
-        cell.addGestureRecognizer(gestureRecognizer)
- */
         
         return cell
         
@@ -71,21 +73,11 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print ("Folder \(indexPath.item + 1) was selected")
       //  let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
-        collectionView.userInteractionEnabled = false
-        dialogue.alpha = 1
-        nonButton.alpha = 1
-        ouiButton.alpha = 1
+        index = indexPath.item
+    
     }
     
-    @IBAction func ouiAction(sender: AnyObject) {
-    }
-    
-    @IBAction func nonAction(sender: AnyObject) {
-     collectionView.userInteractionEnabled = true
-        dialogue.alpha = 0
-        nonButton.alpha = 0
-        ouiButton.alpha = 0
-    }
+   
     
 }
 
