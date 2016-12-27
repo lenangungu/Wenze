@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class AchatViewController: UIViewController {
+class AchatViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
     @IBOutlet weak var articleNumber: UILabel!
     var arNum: Int?
@@ -35,9 +36,32 @@ class AchatViewController: UIViewController {
     }
     
    
+    @IBAction func sendAction(sender: AnyObject) {
+        
+        let msgVC = MFMessageComposeViewController()
+        let additionalText = " Le numero du clients est \(numberTextField.text), son email est \(emailTextField.text), pour l'article numero \(articleNumber.text)"
+        
+        msgVC.body = messageTextView.text + additionalText
+        
+        
+        msgVC.recipients = ["+14692685808"]
+        
+        
+        msgVC.messageComposeDelegate = self
+       
+    }
     
+    func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
+        
+    }
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
 }
+
+
+
+
+
+
