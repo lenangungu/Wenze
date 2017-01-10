@@ -29,16 +29,16 @@ class ItemsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToAchatViewController(segue: UIStoryboardSegue)
+    @IBAction func unwindToAchatViewController(_ segue: UIStoryboardSegue)
     {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "achat")
         {
             let origin = sender as! ItemsCollectionViewCell
-            let nextVC = segue.destinationViewController as! AchatViewController
+            let nextVC = segue.destination as! AchatViewController
             nextVC.arNum = origin.cellIndex! + 1 
 
         }
@@ -49,14 +49,14 @@ class ItemsViewController: UIViewController {
 extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSource
 {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
     
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: resuseIdentifier, for: indexPath) as! ItemsCollectionViewCell
         
         cell.cellIndex = indexPath.row
         index = indexPath.row
@@ -70,8 +70,8 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     // MARK: Delegate
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print ("Folder \(indexPath.item + 1) was selected")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print ("Article \(indexPath.item + 1) was selected")
       //  let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! ItemsCollectionViewCell
         index = indexPath.item
     
@@ -84,7 +84,7 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
 extension ItemsViewController: UICollectionViewDelegateFlowLayout {
     // Asks the delegate for the size of the specified item’s cell. cvWidth is the global var I created in the collectionView IBOutlet
     // RETURN: The width and height of the specified item. Both values must be greater than 0.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //print(collectionView.frame.width)
         //print(collectionView.frame.height)
         return CGSize(width: (ItemsCollectionView.frame.width / 2.2), height: (ItemsCollectionView.frame.width/3.3))
@@ -92,30 +92,30 @@ extension ItemsViewController: UICollectionViewDelegateFlowLayout {
     
     // Asks the delegate for the margins to apply to content in the specified section.
     // RETURN: The margins to apply to items in the section.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 40, left: 10, bottom: 90, right: 10)
     }
     
     // Asks the delegate for the spacing between successive rows or columns of a section.
     // RETURN: The minimum space (measured in points) to apply between successive lines in a section.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return  5  }
     
     // Asks the delegate for the spacing between successive items in the rows or columns of a section.
     // RETURN: The minimum space (measured in points) to apply between successive items in the lines of a section.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
     // Asks the delegate for the size of the header view in the specified section.
     // RETURN: The size of the header. If you return a value of size (0, 0), no header is added.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 0, height: 0)
     }
     
     // Asks the delegate for the size of the footer view in the specified section.
     // RETURN: The size of the footer. If you return a value of size (0, 0), no footer is added.
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: 0, height: 0)
     }
     
