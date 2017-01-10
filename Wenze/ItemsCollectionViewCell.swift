@@ -14,4 +14,6 @@ class ItemsCollectionViewCell: UICollectionViewCell {
 
     var cellIndex: Int?
     
+    @IBOutlet weak var priceLabel: UILabel!
+    
 }

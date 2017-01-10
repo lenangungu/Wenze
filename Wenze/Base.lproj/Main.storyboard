@@ -46,16 +46,24 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jyg-X2-Hq9">
                                                     <rect key="frame" x="0.0" y="0.0" width="195" height="186"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-mJ-Kug">
+                                                    <rect key="frame" x="146.5" y="165" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="Jyg-X2-Hq9" firstAttribute="leading" secondItem="XVl-T6-rXu" secondAttribute="leading" id="J5i-Kj-76S"/>
                                             <constraint firstItem="Jyg-X2-Hq9" firstAttribute="height" secondItem="XVl-T6-rXu" secondAttribute="height" id="Lgy-nf-OUE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="t4C-mJ-Kug" secondAttribute="bottom" constant="-8" id="T9E-Dy-eMJ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="t4C-mJ-Kug" secondAttribute="trailing" constant="-4" id="UHZ-e8-hhu"/>
                                             <constraint firstItem="Jyg-X2-Hq9" firstAttribute="top" secondItem="XVl-T6-rXu" secondAttribute="topMargin" constant="-8" id="Vrh-H7-MUm"/>
                                             <constraint firstItem="Jyg-X2-Hq9" firstAttribute="width" secondItem="XVl-T6-rXu" secondAttribute="width" id="WDX-KM-efe"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="image" destination="Jyg-X2-Hq9" id="2Qz-47-PR8"/>
+                                            <outlet property="priceLabel" destination="t4C-mJ-Kug" id="Eu4-3M-0ad"/>
                                             <segue destination="tNU-JE-jbN" kind="show" identifier="achat" id="df3-8R-t0S"/>
                                         </connections>
                                     </collectionViewCell>

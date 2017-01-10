@@ -18,6 +18,8 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var ItemsCollectionView: UICollectionView!
     var items: [UIImage] = [ UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image2")!, UIImage(named: "image3")!, UIImage(named: "image4")!, UIImage(named: "image5")!, UIImage(named: "image6")!, UIImage(named: "image7")!, UIImage(named: "image8")!]
     
+    var prices: [String] = ["$10","$15","$22","$10","$22","$43","$30","$33","$50"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +63,7 @@ extension ItemsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         cell.cellIndex = indexPath.row
         index = indexPath.row
         cell.image.image = items[indexPath.row]
+        cell.priceLabel.text = prices[indexPath.row]
         
         return cell
         
