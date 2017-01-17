@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Flag_of_South_Africa.svg.png",
+      "filename" : "usa.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Flag_of_South_Africa.svg-1.png",
+      "filename" : "usa-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Flag_of_South_Africa.svg-2.png",
+      "filename" : "usa-2.png",
       "scale" : "3x"
     }
   ],

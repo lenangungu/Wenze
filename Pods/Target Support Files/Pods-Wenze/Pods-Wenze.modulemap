@@ -1,0 +1,6 @@
+framework module Pods_Wenze {
+  umbrella header "Pods-Wenze-umbrella.h"
+
+  export *
+  module * { export * }
+}
