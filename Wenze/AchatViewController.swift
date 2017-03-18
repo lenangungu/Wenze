@@ -31,17 +31,21 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
         super.viewDidLoad()
        
         articleNumber.text = String(arNum!)
-        if (arNum! <= 3)
+        if (arNum! <= 17)
         {
             flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
         }
-        else if (arNum! > 3 && arNum! < 5)
+        else if (arNum! > 17 && arNum! < 22)
         {
         flagImage.image = UIImage(named: "Flag_of_South_Africa.svg")
         }
-        else
+        else if (arNum! >= 22 && arNum! < 38)
         {
-             flagImage.image = UIImage(named: "usa.png")
+             flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
+        }
+        
+        else{
+              flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
         }
     }
 
@@ -88,11 +92,26 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         let emailVC = MFMailComposeViewController()
         emailVC.mailComposeDelegate = self
+            articleNumber.text = String(arNum!)
         
         let additionalText = " Mon numero est le \(numberTextField.text!), et mon email est \(emailTextField.text!) ."
-        
-    
-        emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
+            
+       //  emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
+            if (arNum! <= 17){
+                emailVC.setToRecipients(["didi.colin@hotmail.com"])
+            }
+            else if (arNum! > 17 && arNum! < 22)
+            {
+                 emailVC.setToRecipients(["mumbasandra@yahoo.fr "])
+            }
+            else if (arNum! >= 22 && arNum! < 38)
+            {
+                emailVC.setToRecipients(["archangeone@gmail.com"])
+            }
+            else
+            {
+                emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
+            }
         emailVC.setSubject("Je suis interessé par votre article \(articleNumber.text!)" )
         emailVC.setMessageBody("\(messageTextView.text!)" + "\n\n\(additionalText)", isHTML: false)
         
