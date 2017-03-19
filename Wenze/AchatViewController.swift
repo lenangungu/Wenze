@@ -98,15 +98,19 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
             
        //  emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
             if (arNum! <= 17){
-                emailVC.setToRecipients(["didi.colin@hotmail.com"])
+                emailVC.setToRecipients(["didi.colin@hotmail.com","lenangungu@hotmail.co.uk"])
             }
             else if (arNum! > 17 && arNum! < 22)
             {
-                 emailVC.setToRecipients(["mumbasandra@yahoo.fr "])
+                 emailVC.setToRecipients(["mumbasandra@yahoo.fr ","lenangungu@hotmail.co.uk"])
             }
             else if (arNum! >= 22 && arNum! < 38)
             {
-                emailVC.setToRecipients(["archangeone@gmail.com"])
+                emailVC.setToRecipients(["archangeone@gmail.com","lenangungu@hotmail.co.uk"])
+            }
+            else if (arNum! >= 38 && arNum! < 43)
+            {
+                emailVC.setToRecipients(["gastinmwanzak@gmail.com","lenangungu@hotmail.co.uk"])
             }
             else
             {
