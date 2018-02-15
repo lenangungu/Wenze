@@ -157,7 +157,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fut-OD-pKY">
-                                <rect key="frame" x="15" y="25" width="44" height="12"/>
+                                <rect key="frame" x="15" y="35" width="50" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2KZ-eA-EnM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Annuler"/>
                                 <connections>
@@ -214,14 +217,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="myT-VB-1sO" secondAttribute="trailing" constant="-5" id="Emz-nV-j9X"/>
                             <constraint firstItem="yLt-LZ-eBG" firstAttribute="leading" secondItem="wCp-lu-rgn" secondAttribute="leading" id="Gha-Bz-Vys"/>
                             <constraint firstItem="yLt-LZ-eBG" firstAttribute="top" secondItem="wCp-lu-rgn" secondAttribute="bottom" constant="13" id="Hrt-vy-P8B"/>
-                            <constraint firstItem="DKZ-Dc-doJ" firstAttribute="top" secondItem="fut-OD-pKY" secondAttribute="bottom" constant="-7" id="Mem-Hi-Nsc"/>
+                            <constraint firstItem="DKZ-Dc-doJ" firstAttribute="top" secondItem="fut-OD-pKY" secondAttribute="bottom" constant="-30" id="Mem-Hi-Nsc"/>
                             <constraint firstItem="1bP-2Y-EEU" firstAttribute="height" secondItem="WNC-ld-NKS" secondAttribute="height" id="MlT-1J-Emv"/>
                             <constraint firstItem="GgX-op-dgK" firstAttribute="width" secondItem="WNC-ld-NKS" secondAttribute="width" multiplier="0.2" id="Oct-C3-aMS"/>
                             <constraint firstItem="9f2-Gl-ETw" firstAttribute="centerX" secondItem="WNC-ld-NKS" secondAttribute="centerX" id="Rhz-95-Nce"/>
                             <constraint firstItem="QKc-mX-xGA" firstAttribute="height" secondItem="WNC-ld-NKS" secondAttribute="height" multiplier="0.35" id="T64-Sg-Lr8"/>
                             <constraint firstItem="fut-OD-pKY" firstAttribute="leading" secondItem="WNC-ld-NKS" secondAttribute="leadingMargin" constant="-5" id="d2F-sA-9Nn"/>
                             <constraint firstItem="Brm-M6-kHs" firstAttribute="top" secondItem="DKZ-Dc-doJ" secondAttribute="bottom" constant="-10" id="dES-el-669"/>
-                            <constraint firstItem="fut-OD-pKY" firstAttribute="top" secondItem="yVM-al-g1G" secondAttribute="bottom" constant="5" id="daw-p4-WAe"/>
+                            <constraint firstItem="fut-OD-pKY" firstAttribute="top" secondItem="yVM-al-g1G" secondAttribute="bottom" constant="15" id="daw-p4-WAe"/>
                             <constraint firstItem="Moe-ZX-YFY" firstAttribute="top" secondItem="lDx-DU-MP1" secondAttribute="bottom" constant="28" id="e0J-6T-AjY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Brm-M6-kHs" secondAttribute="trailing" constant="30" id="eRT-lG-6Gd"/>
                             <constraint firstItem="Moe-ZX-YFY" firstAttribute="leading" secondItem="WNC-ld-NKS" secondAttribute="leadingMargin" constant="5" id="fAN-qy-1F1"/>

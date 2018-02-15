@@ -31,6 +31,8 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
         super.viewDidLoad()
        
         articleNumber.text = String(arNum!)
+        flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
+        /*
         if (arNum! <= 17)
         {
             flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
@@ -47,6 +49,7 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
         else{
               flagImage.image = UIImage(named: "Flag_of_the_Democratic_Republic_of_the_Congo.svg@1x")
         }
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,8 +98,9 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
             articleNumber.text = String(arNum!)
         
         let additionalText = " Mon numero est le \(numberTextField.text!), et mon email est \(emailTextField.text!) ."
-            
+         emailVC.setToRecipients(["ngungu4@yahoo.fr","lenangungu@hotmail.co.uk","mickyngungu@gmail.com"]) 
        //  emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
+            /*
             if (arNum! <= 17){
                 emailVC.setToRecipients(["didi.colin@hotmail.com","lenangungu@hotmail.co.uk"])
             }
@@ -116,6 +120,7 @@ class AchatViewController: UIViewController, MFMailComposeViewControllerDelegate
             {
                 emailVC.setToRecipients(["lenangungu@hotmail.co.uk"])
             }
+            */
         emailVC.setSubject("Je suis interessé par votre article \(articleNumber.text!)" )
         emailVC.setMessageBody("\(messageTextView.text!)" + "\n\n\(additionalText)", isHTML: false)
         
